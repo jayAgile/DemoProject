@@ -6,18 +6,18 @@
  */
 
 import type {PropsWithChildren} from 'react';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import {useTranslation} from 'react-i18next';
 import {
   Button,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
-import {useTranslation} from 'react-i18next';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+
 import {styles} from './style';
 
 type SectionProps = PropsWithChildren<{
@@ -88,8 +88,8 @@ function AppScreen(): JSX.Element {
             {t('EDIT')} <Text style={styles.highlight}> {t('FILE_NAME')}</Text>
             {t('TO_CHANGE_SCREEN')}
           </Section>
-          <Section title={t('DEBUG')}></Section>
-          <Section title={t('DEBUG')}></Section>
+          <Section title={t('DEBUG')} />
+          <Section title={t('DEBUG')} />
           <Section title={t('LEARN_MORE')}>{t('READ_DOCS')}</Section>
         </View>
       </ScrollView>
